@@ -11,9 +11,9 @@
   <script src="https://cdn.jsdelivr.net/npm/just-validate@4.2.0/dist/just-validate.production.min.js"></script>
   <link rel="stylesheet" href="style.css">
 
-
 </head>
 <body>
+
  <div class="d-flex justify-content-end p-3">
     <div class="logo-wrapper">
       <img src="amman.png" alt="Amman">
@@ -23,12 +23,13 @@
   </div>
 </div>
 
+<main>
 <div class="container mt-5">
   <h1 class="form-title">Formulir Pendaftaran Beasiswa Amman</h1>
   <form id="registrationForm">
     <!-- Section 1: Informasi User -->
     <div class="form-section current" id="section1">
-      <h4>Informasi User</h4>
+      <h3>Informasi User</h3>
       <div class="row">
         <div class="col-md-6 mb-3">
           <label>Nama Depan*</label>
@@ -44,7 +45,7 @@
         </div>
         <div class="col-md-6 mb-3">
           <label>Nomor KTP/KK*</label>
-          <input type="text" name="no_ktp_kk" class="form-control" required>
+          <input type="number" name="no_ktp_kk" class="form-control" required>
         </div>
         <div class="col-md-6 mb-3">
           <label>Jenis Kelamin*</label>
@@ -60,11 +61,11 @@
         </div>
          <div class="col-md-6 mb-3">
             <label>Tanggal Lahir*</label>
-            <input type="date" name="tanggal_lahir" id="tanggal_lahir" class="form-control" required>
+            <input type="date" class="form-control" id="tanggal_lahir" name="tanggal_lahir" required>
         </div>
          <div class="col-md-6 mb-3">
             <label>Usia*</label>
-            <input type="number" name="usia" id="usia" class="form-control" required readonly>
+            <input type="number" class="form-control" id="usia" name="usia" required>
         </div>
         <div class="col-md-6 mb-3">
           <label>Agama*</label>
@@ -126,7 +127,7 @@
 
     <!-- Section 2: Alamat -->
     <div class="form-section" id="section2">
-      <h4>Alamat</h4>
+      <h3>Alamat</h3>
       <div class="row">
         <div class="col-md-6 mb-3">
           <label>Kabupaten*</label>
@@ -175,7 +176,7 @@
 
     <!-- Section 3: Pendidikan -->
     <div class="form-section" id="section3">
-      <h4>Pendidikan</h4>
+      <h3>Pendidikan</h3>
       <div class="row">
         <div class="col-md-6 mb-3">
           <label>Pendidikan Terakhir*</label>
@@ -201,16 +202,96 @@
           <label>Nama Sekolah*</label>
           <input type="text" name="nama_sekolah" class="form-control" required>
         </div>
-        <div class="col-md-12 mb-3">
-          <label>Prestasi Yang Telah Anda Raih</label>
-          <textarea name="prestasi" class="form-control"></textarea>
-        </div>
       </div>
+      <div class="row">
+        <h3>Prestasi Akademik</h3>
+        <div class="col-md-6 mb-3">
+      <label for="nama_kejuaraan" class="form-label">Nama Kejuaraan</label>
+      <input type="text" class="form-control" id="nama_kejuaraan" name="nama_kejuaraan">
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="penyelenggara" class="form-label">Nama Penyelenggara</label>
+      <input type="text" class="form-control" id="penyelenggara" name="penyelenggara">
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="tingkat_kejuaraan" class="form-label">Tingkat Kejuaraan</label>
+      <select class="form-select" id="tingkat_kejuaraan" name="tingkat_kejuaraan">
+        <option value="">Pilih Tingkat</option>
+        <option>Internasional</option>
+        <option>Nasional</option>
+        <option>Provinsi</option>
+        <option>Kota</option>
+        <option>Kabupaten</option>
+      </select>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="kategori_bidang" class="form-label">Kategori/Bidang</label>
+      <input type="text" class="form-control" id="kategori_bidang" name="kategori_bidang">
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="peringkat_juara" class="form-label">Peringkat Juara</label>
+      <select class="form-select" id="peringkat_juara" name="peringkat_juara">
+        <option value="">Pilih Peringkat</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>Terbaik</option>
+        <option>Favorit</option>
+      </select>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="tanggal_kejuaraan" class="form-label">Tanggal Penyelenggaraan</label>
+      <input type="month" class="form-control" id="tanggal_kejuaraan" name="tanggal_kejuaraan">
+    </div>
+      </div>
+    <div class="row">
+    <h3>Riwayat Organisasi</h3>
+    <div class="col-md-6 mb-3">
+      <label for="nama_organisasi" class="form-label">Nama Organisasi</label>
+      <input type="text" class="form-control" id="nama_organisasi" name="nama_organisasi">
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="skala_organisasi" class="form-label">Skala Organisasi</label>
+      <select class="form-select" id="skala_organisasi" name="skala_organisasi">
+        <option value="">Pilih Skala</option>
+        <option>Internasional</option>
+        <option>Nasional</option>
+        <option>Provinsi</option>
+        <option>Kota</option>
+        <option>Kabupaten</option>
+        <option>Kecamatan/Kelurahan/Desa</option>
+      </select>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="peran_organisasi" class="form-label">Peran</label>
+      <select class="form-select" id="peran_organisasi" name="peran_organisasi">
+        <option value="">Pilih Peran</option>
+        <option>Ketua/setara</option>
+        <option>Wakil Ketua/setara</option>
+        <option>Sekretaris/setara</option>
+        <option>Bendahara/setara</option>
+        <option>Kepala Bidang/setara</option>
+        <option>Anggota</option>
+      </select>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="tahun_mulai" class="form-label">Tahun Mulai</label>
+      <input type="month" class="form-control" id="tahun_mulai" name="tahun_mulai" min="2023-01">
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="tahun_selesai" class="form-label">Tahun Selesai</label>
+      <input type="month" class="form-control" id="tahun_selesai" name="tahun_selesai">
+    </div>
+    <div class="col-12 mb-3">
+      <label for="kontribusi" class="form-label">Kontribusi</label>
+      <textarea class="form-control" id="kontribusi" name="kontribusi" rows="3" placeholder="Ceritakan kontribusi yang kamu berikan di organisasi"></textarea>
+    </div>
+  </div>
     </div>
 
      <!-- Section 4: Dokumen -->
     <div class="form-section" id="section4">
-      <h4>Dokumen</h4>
+      <h3>Dokumen</h3>
       <div class="row">
         <div class="col-md-12 mb-3">
           <label>KTP (atau KTP Orang Tua untuk di bawah 17 tahun)</label>
@@ -236,7 +317,7 @@
 
   <!-- Section 5: Essay -->
     <div class="form-section" id="section5">
-      <h4>Essay</h4>
+      <h3>Essay</h3>
       <div class="mb-3">
         <label>Hobi (Bisa menyebutkan lebih dari satu)</label>
         <textarea name="hobi" class="form-control" required></textarea>
@@ -264,14 +345,16 @@
       <button type="button" class="btn btn-primary" id="nextBtn" onclick="nextPrev(1)">Selanjutnya</button>
       <button type="submit" class="btn btn-success d-none" id="submitBtn">Kirim</button>
     </div>
-    <script src="form-handler.js"></script>
   </form>
   </div>
+  <script src="form-handler.js"></script>
 
-</body>
+</main>
 <footer>
   <p>&copy; 2025 Rencanamu.id. All rights reserved.</p>
 </footer>
+
+</body>
 
 </html>
 
