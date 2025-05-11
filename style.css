@@ -1,0 +1,102 @@
+  .form-section { display: none; }
+  .form-section.current { display: block; }
+
+ html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff9e6; /* kuning lembut */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  main {
+    flex: 1;
+  }
+
+  h1.form-title {
+    color: #212529;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  #progressBar {
+    height: 6px;
+    background: #0d6efd;
+    width: 0%;
+    transition: width 0.3s;
+    border-radius: 4px;
+  }
+
+  .form-container {
+    background-color: #ffffff;
+    color: #333;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    margin-top: 100px;
+  }
+
+  #progressPercent {
+    position: fixed;
+    top: 6px;
+    right: 10px;
+    font-size: 14px;
+    color: #0d6efd;
+    font-weight: bold;
+  }
+
+  .form-section {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+  }
+  .form-section h3 {
+    border-left: 5px solid #0d6efd;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  
+  .logo-wrapper {
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    margin-left: 10px;
+  }
+
+  .logo-wrapper img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  #submitBtn[disabled] .spinner-border {
+    display: inline-block;
+  }
+  .spinner-border {
+    display: none;
+    width: 1rem;
+    height: 1rem;
+    border-width: .2em;
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+
+  footer {
+    bottom:0;
+    background-color: #f4b400;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+  }
