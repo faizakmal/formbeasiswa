@@ -118,7 +118,7 @@
 
     progressBar.style.width = '30%';
 
-    fetch('YOUR_GOOGLE_APPS_SCRIPT_WEBAPP_URL', {
+    fetch('https://script.google.com/macros/s/AKfycbyYQ008ZqtslioCQcQzt7v54nGnYV-sMRltQFy6qyDw95W4qnuXCuhW-pUX3TM0MNNPWw/exec', {
       method: 'POST',
       body: formData
     })
