@@ -1,9 +1,20 @@
   .form-section { display: none; }
   .form-section.current { display: block; }
 
+ html, body {
+    height: 100%;
+    margin: 0;
+  }
+
   body {
-  background-color: #fff9e6;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff9e6; /* kuning lembut */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  main {
+    flex: 1;
   }
 
   h1.form-title {
